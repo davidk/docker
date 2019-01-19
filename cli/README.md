@@ -9,7 +9,7 @@ To log into a Docker Registry, we recommend using the [Docker Login](../login) A
 ```
 action "build" {
   uses = "actions/docker/cli@master"
-  args = "build -t user/repo ."
+  args = ["build -t user/repo .", "tag user/repo user/repo:tag"]
 }
 ```
 
